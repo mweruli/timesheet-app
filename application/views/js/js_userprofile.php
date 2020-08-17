@@ -1,0 +1,1 @@
+<script src="<?= base_url() ?>assets/js/pages-user-profile.js"></script>

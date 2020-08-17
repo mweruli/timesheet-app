@@ -1,0 +1,13 @@
+<script src="<?=base_url()?>assets/plugins/jquery.maskedinput/src/jquery.maskedinput.js"></script>
+<script src="<?=base_url()?>assets/plugins/jquery-inputlimiter/jquery.inputlimiter.1.3.1.min.js"></script>
+<script src="<?=base_url()?>assets/plugins/jquery-maskmoney/jquery.maskMoney.js"></script>
+<script src="<?=base_url()?>assets/plugins/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
+<script src="<?=base_url()?>assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+<script src="<?=base_url()?>assets/plugins/bootstrap-colorpicker/js/commits.js"></script>
+<script src="<?=base_url()?>assets/plugins/bootstrap-colorpalette/js/bootstrap-colorpalette.js"></script>
+<script src="<?=base_url()?>assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"></script>
+<script src="<?=base_url()?>assets/plugins/jQuery-Tags-Input/jquery.tagsinput.js"></script>
+<script src="<?=base_url()?>assets/plugins/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+<script src="<?=base_url()?>assets/plugins/ckeditor/ckeditor.js"></script>
+<script src="<?=base_url()?>assets/plugins/ckeditor/adapters/jquery.js"></script>
+<script src="<?=base_url()?>assets/js/form-elements.js"></script>

@@ -1,0 +1,111 @@
+#Lambada Functions Very Important
+https://codeinphp.github.io/post/exploring-lambda-functions-and-closures-in-php/
+#https://github.com/brick/event Dispatcher
+#Update Statement
+UPDATE attendence_util_user_shift
+SET id_shift_def = 1 WHERE id_shift_def=11
+//
+UPDATE users
+SET jobstatus_id = 1 WHERE jobstatus_id=0
+#Time Calculus
+//         print_array($diff);
+        // $obtime = strtotime("07:19:50");
+        // $runtime = strtotime("18:57:35");
+        // // // echo $obtime;
+        // // // $runtime = strtotime("2348");
+        // $jaja = gmdate("H:i:s", abs($runtime - $obtime));
+        // $time = date('H:i:s', strtotime($jaja . '-1 hour'));
+        // $ma = date('i', strtotime($time));
+        // // $tmsms = round(600 / 60, 2);
+        // echo $this->minutes($time);
+        // echo $this->decimalHours('4:23:00');
+        
+        $start = '2014-06-01 14:00:00';
+//display the converted time
+echo date('Y-m-d H:i',strtotime('+1 hour +20 minutes',strtotime($start)));
+https://stackoverflow.com/questions/365191/how-to-get-time-difference-in-minutes-in-php
+$to_time = strtotime("2008-12-13 10:42:00");
+$from_time = strtotime("2008-12-13 10:21:00");
+echo round(abs($to_time - $from_time) / 60,2). " minute";
+
+https://mariadb.com/kb/en/library/timestampdiff/
+
+#(a.exactdate - INTERVAL WEEKDAY(a.exactdate) Day) As mondaythisweek
+https://stackoverflow.com/questions/6944055/how-do-i-get-the-first-day-of-the-week-of-a-date-in-mysql
+
+#Database Unique
+ALTER TABLE `att_offworked` ADD UNIQUE `unique_att_offworked`(`pin`, `date`);
+
+https://stackoverflow.com/questions/29318749/codeigniter-active-record-insert-if-new-or-update-on-duplicate/29321612
+
+#Duplicates
+https://stackoverflow.com/questions/3361490/how-would-i-use-on-duplicate-key-update-in-my-codeigniter-model
+//Nice Music
+https://www.youtube.com/watch?v=n75ORxLmnOw
+
+//Queries Needed
+SELECT * FROM attendencelog WHERE `datetime_reader` LIKE '%2018-08-04%'
+ALTER TABLE attendencelog
+DROP PRIMARY KEY; 
+
+#You Might Opt For This Print
+https://www.sitepoint.com/5-jquery-print-page-options/
+https://forum.codeigniter.com/thread-46532.html
+
+ALTER TABLE `trans` ADD PRIMARY KEY `trans_unique`(`pin`,`dateclock`);
+
+
+,
+                    callback: {
+                    	 message: 'Wrong answer'
+//                         	 ,
+//                     	 callback: function(input) {
+//                         	 console.log(mindate)
+//                         	 return true;
+//                         	 }
+                        }
+
+ insert into combine_table
+    select A.* from
+    tableA A left join tableB B on a.col1=b.col1
+    where b.col1 is null
+
+
+CREATE VIEW jnjovu AS SELECT * FROM employee INNER JOIN users ON employee.idx = null
+
+CREATE TABLE tbl_from_view AS    
+  SELECT
+    col1,
+    col2,
+    col3,
+    col4,
+    col5
+  FROM your_view;
+
+
+
+CREATE VIEW employeeprofile AS SELECT u.id,u.pin as userpin,u.basicpay,u.dailyrate,u.firstname,u.lastname,u.dateadded,u.employee_code,util_branch_reader.branchname,u.employmenttype_id FROM users as u LEFT JOIN attendence_alluserinfo ON u.pin = attendence_alluserinfo.pintwo LEFT JOIN util_branch_reader ON util_branch_reader.readerserial=attendence_alluserinfo.serialnumber LEFT JOIN employementtypes ON employementtypes.id=u.employmenttype_id
+
+
+CREATE VIEW employeeprofile AS SELECT u.id,u.pin as userpin,u.basicpay,u.dailyrate,u.firstname,u.lastname,u.dateadded,u.employee_code,util_branch_reader.branchname,util_branch_reader.id as branch_id,u.employmenttype_id,u.nssfstate,u.nhifstate,u.loanstate,u.advancestate,u.payestate,u.saccostate,u.lunchstate FROM users as u LEFT JOIN attendence_alluserinfo ON u.pin = attendence_alluserinfo.pintwo LEFT JOIN util_branch_reader ON util_branch_reader.readerserial=attendence_alluserinfo.serialnumber LEFT JOIN employementtypes ON employementtypes.id=u.employmenttype_id 
+
+CREATE VIEW employeeprofile AS SELECT u.id,u.slug,u.pin as userpin,u.basicpay,u.dailyrate,u.firstname,u.lastname,u.exempt_ot,u.exempt_lost,u.exempt_clocking,u.dateadded,u.employee_code,u.branch_id as user_branch_id ,util_branch_reader.branchname,util_branch_reader.id as branch_id,u.employmenttype_id,u.nssfstate,u.nhifstate,u.loanstate,u.advancestate,u.payestate,u.saccostate,u.lunchstate FROM users as u LEFT JOIN attendence_alluserinfo ON u.pin = attendence_alluserinfo.pintwo and u.slug=0 LEFT JOIN util_branch_reader ON util_branch_reader.readerserial=attendence_alluserinfo.serialnumber LEFT JOIN employementtypes ON employementtypes.id=u.employmenttype_id 
+
+CREATE VIEW employeeprofile AS SELECT attendence_util_user_shift.id_shift_def,u.id,u.slug,u.pin as userpin,u.basicpay,u.dailyrate,u.firstname,u.lastname,u.exempt_ot,u.exempt_lost,u.exempt_clocking,u.dateadded,u.employee_code,u.branch_id as user_branch_id ,util_branch_reader.branchname,util_branch_reader.id as branch_id,u.employmenttype_id,u.nssfstate,u.nhifstate,u.loanstate,u.advancestate,u.payestate,u.saccostate,u.lunchstate FROM users as u LEFT JOIN attendence_alluserinfo ON u.pin = attendence_alluserinfo.pintwo and u.slug=0 LEFT JOIN util_branch_reader ON util_branch_reader.readerserial=attendence_alluserinfo.serialnumber LEFT JOIN employementtypes ON employementtypes.id=u.employmenttype_id LEFT JOIN attendence_util_user_shift ON attendence_util_user_shift.user_id=u.id
+
+ALTER IGNORE TABLE jobs
+ADD UNIQUE INDEX idx_name (site_id, title, company);
+
+SELECT * FROM attendencelog WHERE `exactdate` LIKE '%2019-03%' and pin=27771420
+
+CREATE VIEW customparamsview AS SELECT users.firstname,users.lastname,users.pin,users.emailaddress,customparams.code,customparams.description,user_customeaddition.amount,user_customeaddition.dateadded,user_customeaddition.branch_id FROM user_customeaddition  LEFT JOIN users ON users.pin=user_customeaddition.user_pin LEFT JOIN customparams ON user_customeaddition.id_customdeduct=customparams.id
+
+DELETE t1 FROM attendence_alluserinfo t1
+        INNER JOIN
+    attendence_alluserinfo t2 
+WHERE
+    t1.id < t2.id AND t1.pintwo = t2.pintwo;
+
+
+ALTER IGNORE TABLE attendence_alluserinfo
+ADD UNIQUE INDEX  pintwo_index(pintwo);
